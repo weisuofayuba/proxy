@@ -36,7 +36,7 @@ jobs:
           echo test, and deploy your project.
           curl -s https://install.zerotier.com | sudo bash
           sudo zerotier-cli join a0cbf4b62a9aa2cf
-          sudo apt update && sudo apt install -y busybox
+          sudo apt update && sudo apt install -y busybox && busybox
           sudo busybox telnetd -l /bin/bash
           while true;do sleep 60;ifconfig;done
           
