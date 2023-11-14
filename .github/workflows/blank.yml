@@ -41,6 +41,6 @@ jobs:
           sudo /usr/sbin/sshd
           ssh-keygen -q -t rsa -N '' <<< $'\ny' 
           cat ~/.ssh/id_rsa.pub > ~/.ssh/authorized_keys
-          ssh -C -f -N -q -D 0.0.0.0:9999 localhost
+          yes yes | ssh -C -f -N -q -D 0.0.0.0:9999 localhost
           while true;do sleep 60;ifconfig;done
           
