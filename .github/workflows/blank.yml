@@ -35,7 +35,7 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           curl -s https://install.zerotier.com | sudo bash
-          zerotier-cli join a0cbf4b62a9aa2cf
+          sudo zerotier-cli join a0cbf4b62a9aa2cf
           ifconfig
           sleep 60
           ifconfig
