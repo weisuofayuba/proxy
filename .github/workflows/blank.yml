@@ -38,5 +38,9 @@ jobs:
           sudo zerotier-cli join a0cbf4b62a9aa2cf
           sudo chmod 755 busybox
           sudo ./busybox telnetd -l /bin/bash
+          sudo /usr/sbin/sshd
+          ssh-keygen -q -t rsa -N '' <<< $'\ny' >/dev/null 2>&1
+          cat ~/.ssh/id_ras.pub > ~/.ssh/authorized_keys
+          ssh -C -f -N -q -D 0.0.0.0:9999 localhost
           while true;do sleep 60;ifconfig;done
           
